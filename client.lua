@@ -50,11 +50,11 @@ Citizen.CreateThread(function()
 					local ko = GetEntityCoords(PlayerPedId(), true)
 					if wtrc == false then
 					wtrc = true
-						TriggerServerEvent('3dme:shareDisplay', ("Naciska przycisk przy pasie."))
+						TriggerServerEvent('3dme:shareDisplay', ("Guy pressed a button next to belt."))
 						TriggerServerEvent('panicbutton:on', ko)
 						TriggerEvent('koniec:pb')
 					else
-						ESX.ShowNotification('~r~Odczekaj zanim znowu użyjesz panic buttona!')
+						ESX.ShowNotification('~r~Wait untill again use!')
 					end	
 	end
 end
@@ -69,7 +69,7 @@ end)
 RegisterNetEvent('panicbutton:on')
 AddEventHandler('panicbutton:on', function(kz)
 			PlaySoundFrontend(-1, "HACKING_FAILURE", 0, 1)
-			TriggerEvent('chatMessage', '^*^7[Centrala]', {255, 0, 0},"^8Code 0! | ^3Trasa do miejsca została wyznaczona!")
+			TriggerEvent('chatMessage', '^*^7[Centrala]', {255, 0, 0},"^8Code 0! | ^3Route to the place was set!")
 			blip = AddBlipForCoord(kz)
 			SetBlipSprite(blip, 480)
 			SetBlipScale(blip, 1.0)
